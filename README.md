@@ -24,3 +24,6 @@ npm run open // 바로 대시보드 열기
 ```bash
 npm run check
 ```
+
+https://docs.google.com/forms/d/e/1FAIpQLSe4i6BaOssX-Tn9_2gKrl3P34sBRo0_xm1cTPJKwLKR90CXBg/viewform
+데일리 루틴 제출하기
