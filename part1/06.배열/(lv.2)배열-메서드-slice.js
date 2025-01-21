@@ -14,6 +14,16 @@
  */
 function subArray(arr, start, end) {
   // TODO
+  let subArray = [];
+  if(end === 0 && start === 0){
+    return subArray;
+  }
+  if(!end){
+    subArray = arr.slice(start, arr.length);
+  }else{
+    subArray = arr.slice(start, end);
+  }
+  return subArray;
 }
 
 // export를 수정하지 마세요.
