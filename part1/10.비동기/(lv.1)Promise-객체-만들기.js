@@ -12,7 +12,7 @@ const resolvePromise = new Promise ((resolve)=> {
     resolve("Hello");
 });
 
-const rejectPromise = new Promise((resolve,reject) => {
+const rejectPromise = new Promise((resolve, reject) => {
     reject("Error!");
 })
 
