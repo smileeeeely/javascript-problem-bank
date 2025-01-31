@@ -21,7 +21,14 @@
 // }
 
 // TODO: getUsers 함수를 작성하세요.
-async function getUsers(fetchUsers) {}
+async function getUsers(fetchUsers) {
+    const names = await fetchUsers();
+    let answer = [];
+    for(let i=0; i<names.length; i++){
+        answer.push(names[i].name);
+    }
+    return answer;
+}
 
 // export를 수정하지 마세요.
 export { getUsers };
