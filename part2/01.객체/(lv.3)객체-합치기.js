@@ -17,6 +17,7 @@
  */
 
 function mergeObjects(...objs) {
+    return Object.assign({}, ...objs);
 }
 
 // export를 수정하지 마세요.
