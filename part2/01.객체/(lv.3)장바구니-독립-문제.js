@@ -19,16 +19,34 @@ function fixCartReferenceIssue() {
   };
 
   // TODO: userBCart가 userACart와 독립된 복사본을 가지도록 해야 함
-  let userBCart;
+  function deepClone(obj) {
+    if (typeof obj !== "object" || obj === null) {
+      return obj;
+    }
+    if (Array.isArray(obj)) {
+      return obj.map((item) => deepClone(item));
+    }
+    const deepCopyObj = {};
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        deepCopyObj[key] = deepClone(obj[key]);
+      }
+    }
+    return deepCopyObj;
+  }
+  let userBCart = deepClone(userACart);
 
   const coupon = 5000;
 
   applyCoupon(userBCart, coupon);
   function applyCoupon(cart, discount) {
     // TODO
-  }
+    for (let index in cart.items) {
+      cart.items[index].price -= discount;
+    }
 
-  return { userACart, userBCart };
+    return { userACart, userBCart };
+  }
 }
 
 // export를 수정하지 마세요.
