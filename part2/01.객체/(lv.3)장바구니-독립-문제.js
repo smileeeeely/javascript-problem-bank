@@ -45,8 +45,8 @@ function fixCartReferenceIssue() {
       cart.items[index].price -= discount;
     }
 
-    return { userACart, userBCart };
   }
+    return { userACart, userBCart };
 }
 
 // export를 수정하지 마세요.
