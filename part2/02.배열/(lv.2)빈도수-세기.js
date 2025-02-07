@@ -11,7 +11,30 @@
  */
 
 // TODO: 함수를 작성하세요.
-function getFrequency(arr) {}
+function getFrequency(arr) {
+  let cntArr = {};
+  arr.forEach((thing) => {
+    let check = false;
+    for (const it in cntArr) {
+      if (it === thing) {
+        check = true;
+        cntArr[it]++;
+        return;
+      }
+    }
+    if (!check) {
+        if(!isNaN(thing)){
+            console.log('thing',thing)
+            //왜 숫자인데 문자열로 들어감???
+            return;
+        }
+      cntArr[thing] = 1;
+    }
+  });
+  console.log("cntArr", cntArr);
+  return cntArr;
+}
+getFrequency(["1", 1]);
 
 // export 를 수정하지 마세요.
 export { getFrequency };
